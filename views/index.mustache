@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link  rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+      <form action="/" method="post">
+        <label for="item"></label>
+        <input type="text" name="item" value="" placeholder="Add To Do..">
+        <input type="submit">
+      </form>
+
+        <div class="list-container">
+        {{#items}}
+          {{^complete}}
+          <div class="new">
+            <a href="/complete/{{id}}"><button type="button">Mark Complete</button></a>
+        <p>{{item}}<p>
+        </div>
+          {{/complete}}
+        {{/items}}
+        <h1>Complete</h1>
+        {{#items}}
+        {{#complete}}
+        <div class="complete">
+          <del>{{item}}</del>
+        {{/complete}}
+        {{/items}}
+      </div>
+  </body>
+</html>

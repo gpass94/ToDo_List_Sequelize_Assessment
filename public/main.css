@@ -1,0 +1,18 @@
+.list-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.new{
+  display: flex;
+  flex-direction: row;
+}
+
+.new p{
+  flex-basis: 45%;
+}
+
+.new button{
+  flex-basis: 45%;
+}
